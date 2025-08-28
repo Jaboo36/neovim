@@ -1,3 +1,11 @@
 return {
-    { "neovim/nvim-lsp-config", opts = {} }
+    { 
+    "neovim/nvim-lspconfig",
+    config = function()
+        local lspconfig = require("lspconfig")
+
+	lspconfig.lua_ls.setup({})
+	lspconfig.gleam.setup({})
+    end
+    }
 }
